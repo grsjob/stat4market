@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/src/css/style.min.css">
     <title>Stat4market</title>
 </head>
 <body>
@@ -75,16 +76,17 @@
 на маркетплейсы</span>
             <a href="tel:84994503141" class="header__phone"> 8 (499) 450-31-41</a>
             <button class="button header__come-in-button ">Войти</button>
+
             <div class="header__main-nav main-nav">
                 <button class="main-nav__toggle"><span></span></button>
-                <ul class="main-nav__list">
+                <ul class="main-nav__list reset-style-list">
                     <li class="main-nav__item">Аналитика</li>
                     <li class="main-nav__item">Обучение</li>
                 </ul>
             </div>
         </div>
 
-        <ul class="bread-crumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <ul class="bread-crumbs reset-style-list" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a href="/" title="Главная" itemprop="item">
                     <span itemprop="name">Главная</span>
@@ -100,11 +102,10 @@
         </ul>
 
         <section class="course-description">
-            <div class="wrapper">
                 <h1 class="course-description__title"><span
                         class="course-description__title--focus-on">Обучающие курсы</span>
                     для поставщиков на маркетплейсы</h1>
-                <p class="course-description__price">от <span class="course-description__price--focus-on">19 900</span>₽
+                <p class="course-description__price price">от <span class="price--focus-on">19 900</span> ₽
                 </p>
                 <div class="course-description__description">
                     <p>Обучающие курсы по работе и продвижению на маркетплейсах от практикующих селлеров</p>
@@ -119,31 +120,34 @@
                         разработали курсы, которые приведут тебя к результату быстро и захватывающе.
                     </p>
                 </div>
-            </div>
         </section>
     </div>
 </header>
 <main>
-    <section class="experience wrapper">
-        <h2 class="visually-hidden">Наш опыт</h2>
-        <p class="experience__title--sm">Как работает модуль Аналитика по API для Wildberries?</p>
-        <div class="experience__past">
-            <p>
-                Свой путь в бизнесе мы начали в 2016 г. У нас были свои островные магазины в крупных ТЦ Москвы
-                («Европейский», «Метрополис», «Мега» и др.), а также свой интернет-магазин. Мы накопили большой опыт в
-                продвижении своих товаров за счет многочисленных запусков разных рекламных каналов и работы с блогерами.
-            </p>
-        </div>
-        <div class="experience__current">
-            <p>
-                Летом 2019 года мы вышли на маркетплейсы и после работы с ними в течение 2 месяцев приняли решение
-                развивать только это направление. И не прогадали. Весь накопленный опыт мы направили на улучшение и
-                продвижение наших брендов.
-            </p>
-            <p>
-                Пришло время поделится знаниями и лайфхаками, которые будут собраны и доступны в нашей Академии
-                stat4market.
-            </p>
+    <section class="experience ">
+        <div class="wrapper">
+            <h2 class="visually-hidden">Наш опыт</h2>
+            <p class="experience__title">Как работает модуль Аналитика <br> по API для Wildberries?</p>
+            <div class="experience__past">
+                <p>
+                    Свой путь в бизнесе мы начали в 2016 г. У нас были свои островные магазины в крупных ТЦ Москвы
+                    («Европейский», «Метрополис», «Мега» и др.), а также свой интернет-магазин. Мы накопили большой опыт
+                    в
+                    продвижении своих товаров за счет многочисленных запусков разных рекламных каналов и работы с
+                    блогерами.
+                </p>
+            </div>
+            <div class="experience__current">
+                <p>
+                    Летом 2019 года мы вышли на маркетплейсы и после работы с ними в течение 2 месяцев приняли решение
+                    развивать только это направление. И не прогадали. Весь накопленный опыт мы направили на улучшение и
+                    продвижение наших брендов.
+                </p>
+                <p>
+                    Пришло время поделится знаниями и лайфхаками, которые будут собраны и доступны в нашей Академии
+                    stat4market.
+                </p>
+            </div>
         </div>
     </section>
     <section class="advantages wrapper">
@@ -152,10 +156,10 @@
         <p class="advantages__main-thesis">«Увеличение реальной прибыли, конкретика и ключевые инструменты,
             которые дают результат» — на этом тезисе созданы наши курсы
         </p>
-        <ul class="advantages__list">
+        <ul class="advantages__list reset-style-list">
             <li class="advantages__item advantage">
                 <svg class="advantage__icon" width="60" height="60">
-                    <use href="./img/icons/sprite.svg#advantages__icon-target"></use>
+                    <use href="./src/img/icons/sprite.svg#advantages__icon-target"></use>
                 </svg>
                 <p class="advantage__title">Наше обучение построено очень лаконично и просто</p>
                 <p class="advantage__text">Все занятия короткие по продолжительности для легкого восприятия и понимания.
@@ -163,7 +167,7 @@
             </li>
             <li class="advantages__item advantage">
                 <svg class="advantage__icon" width="60" height="60">
-                    <use href="./img/icons/sprite.svg#advantages__icon-data"></use>
+                    <use href="./src/img/icons/sprite.svg##advantages__icon-data"></use>
                 </svg>
                 <p class="advantage__title">Ко всем урокам есть дополнительные материалы</p>
                 <p class="advantage__text">Презентации, краткие инструкции, чек-листы и памятки по работе с
@@ -171,7 +175,7 @@
             </li>
             <li class="advantages__item advantage">
                 <svg class="advantage__icon" width="60" height="60">
-                    <use href="./img/icons/sprite.svg#advantages__icon-group"></use>
+                    <use href="./src/img/icons/sprite.svg##advantages__icon-group"></use>
                 </svg>
                 <p class="advantage__title">Наше обучение — практико-ориентированное</p>
                 <p class="advantage__text">Поэтому после прохождения уроков ты будешь выполнять задания, которые помогут
@@ -179,7 +183,7 @@
             </li>
             <li class="advantages__item advantage">
                 <svg class="advantage__icon" width="60" height="60">
-                    <use href="./img/icons/sprite.svg#advantages__icon-creators"></use>
+                    <use href="./src/img/icons/sprite.svg##advantages__icon-creators"></use>
                 </svg>
                 <p class="advantage__title">Создатели нашей Академии</p>
                 <p class="advantage__text">Действующие селлеры с большим опытом в продажах на маркетплейсах, эксперты
@@ -187,7 +191,6 @@
             </li>
         </ul>
     </section>
-
 </main>
 
 </body>

@@ -1,0 +1,63 @@
+.header {
+  @media(min-width: $desktop-xl) {
+    background-image: url("/src/img/blocks/course-description/Ellipse-left-xl.svg"),
+    url("/src/img/blocks/course-description/Ellipse-right-xl.svg");
+    background-repeat: no-repeat;
+    background-position: left  top, right bottom;
+
+  }
+  &__title {
+    display: flex;
+  }
+
+  &__logo {
+  }
+
+  &__logo-icon {
+  }
+
+  &__logo-title {
+  }
+
+  &__tagline {
+    @media (max-width: $tablet-md){
+      display: none;
+    }
+  }
+
+  &__phone {
+    @media (max-width: $desktop-lg){
+      display: none;
+    }
+  }
+
+  &__come-in-button {
+  }
+
+  &__main-nav {
+
+  }
+}
+
+
+.main-nav {
+  &__toggle {
+  }
+
+  &__list {
+    @media (max-width: $desktop-lg){
+      display: none;
+    }
+  }
+
+  &__item {
+  }
+}
+
+.bread-crumbs {
+  display: flex;
+  &__item {
+  }
+}
+
+@import "./course-description";

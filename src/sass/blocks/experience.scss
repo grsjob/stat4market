@@ -1,0 +1,51 @@
+.experience {
+  padding: 0 95px 0 115px;
+@media (min-width:$tablet-md){
+  font-size: 20px;
+  line-height: 160%;
+}
+  @media(min-width: $desktop-xl) {
+    font-size: 25px;
+
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    margin: 0 0 85px 0;
+    @media (min-width: $tablet-md) {
+      font-size: 40px;
+      line-height: 64px;
+    }
+  }
+
+  &__past {
+    background-image: url("/src/img/blocks/experience/experience-past.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    @media(min-width: $desktop-xl) {
+      padding-left: 535px;
+      padding-top: 100px;
+      padding-right: 155px;
+      min-height: 469px;
+      background-size: 456px 469px;
+    }
+  }
+
+  &__current {
+    background-image: url("/src/img/blocks/experience/experience-current.svg");
+    background-repeat: no-repeat;
+
+
+    @media(min-width: $desktop-xl) {
+      padding-right: 554px;
+      padding-top: 120px;
+      min-height: 474px;
+      background-size: 474px 474px;
+      background-position: right top;
+    }
+  }
+
+}

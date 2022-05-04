@@ -1,0 +1,76 @@
+.price {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 29px;
+  position: relative;
+  padding-left: 53px;
+&:before{
+content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left:0;
+  top: 5px;
+  background-image: url('/src/img/icons/purse.svg');
+}
+  &--focus-on {
+    color: $main-color;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 150%
+  }
+}
+.course-description {
+  @media(min-width: $desktop-xl) {
+    padding-right: 660px;
+    background-image: url("/src/img/blocks/course-description/Superman-xl.svg");
+    background-repeat: no-repeat;
+    background-size: 620px 605px;
+    background-position: right top;
+    margin-bottom: 147px;
+    min-height: 605px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 150%;
+    margin: 0;
+    @media(min-width: $tablet-md) {
+      font-size: 46px;
+      line-height: 65px;
+    }
+    @media(min-width: $desktop-xl) {
+      font-size: 56px;
+      line-height: 80px;;
+    }
+
+    &--focus-on {
+      color: $selected-symbol-title;
+
+    }
+  }
+
+  &__price {
+    margin-bottom: 35px;
+  }
+
+  &__description {
+    @media(min-width: $tablet-md) {
+      font-size: 20px;
+      line-height: 160%;
+    }
+    @media(min-width: $desktop-xl) {
+      font-size: 25px;
+    }
+
+    & p {
+      margin: 0 0 10px 0;
+      @media (min-width: $tablet-md) {
+        margin: 0 0 15px 0;
+      }
+    }
+  }
+}
+
