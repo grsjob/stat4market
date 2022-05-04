@@ -7,9 +7,10 @@
     background-image: url("/src/img/blocks/course-description/Ellipse-left-xl.svg"),
     url("/src/img/blocks/course-description/Ellipse-right-xl.svg");
     background-repeat: no-repeat;
-    background-position: left  top, right bottom;
+    background-position: left top, right bottom;
 
   }
+
   &__title {
     display: flex;
   }
@@ -24,13 +25,13 @@
   }
 
   &__tagline {
-    @media (max-width: $tablet-md){
+    @media (max-width: $tablet-md) {
       display: none;
     }
   }
 
   &__phone {
-    @media (max-width: $desktop-lg){
+    @media (max-width: $desktop-lg) {
       display: none;
     }
   }
@@ -49,7 +50,7 @@
   }
 
   &__list {
-    @media (max-width: $desktop-lg){
+    @media (max-width: $desktop-lg) {
       display: none;
     }
   }
@@ -60,7 +61,25 @@
 
 .bread-crumbs {
   display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0 0 43px 0;
+
   &__item {
+    position: relative;
+    & a{
+      text-decoration: none;
+    }
+
+    &:not(:last-child):after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 1px;
+      right: -17px;
+      top: 15px;
+      background-color: rgba(51, 26, 47, 0.5);
+    }
   }
 }
 
