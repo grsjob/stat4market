@@ -1,4 +1,8 @@
 .header {
+  background-image: url("/src/img/blocks/course-description/Superman-sm.svg");
+  background-repeat: no-repeat;
+  background-position: right 55px;
+
   @media(min-width: $desktop-xl) {
     background-image: url("/src/img/blocks/course-description/Ellipse-left-xl.svg"),
     url("/src/img/blocks/course-description/Ellipse-right-xl.svg");
