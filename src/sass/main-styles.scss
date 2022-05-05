@@ -23,6 +23,14 @@ body {
 }
 
 .button {
+  background: $main-color;
+  border: none;
+  border-radius: 6px;
+  color: $white;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+
 }
 .focus-symbol{
   color: $selected-symbol-logo;
