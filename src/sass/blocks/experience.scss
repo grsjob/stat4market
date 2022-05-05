@@ -21,11 +21,11 @@
   }
 
   &__past {
-    background-image: url("/src/img/blocks/experience/experience-past.svg");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 269px 265px;
-    padding-top: 265px;
+    //background-image: url("/src/img/blocks/experience/experience-past.svg");
+    //background-repeat: no-repeat;
+    //background-position: left top;
+    //background-size: 269px 265px;
+    //padding-top: 265px;
 
     @media(min-width: $desktop-xl) {
       padding-left: 535px;
@@ -53,4 +53,10 @@
     }
   }
 
+}
+.past-experience{
+  &__image{
+    width: 269px;
+    height: 265px;
+  }
 }
