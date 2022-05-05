@@ -1,57 +1,63 @@
 .advantages {
-  &__title {
-    text-align: center;
-    line-height: 150%;
-    font-weight: 700;
-    font-size: 24px;
-    margin: 0 0 20px 0;
-    &--focus-on {
-      position: relative;
-      &:after{
-        content: "";
-        position: absolute;
-        width: 131px;
-        height: 4px;
-        bottom: -8px;
-        left:0;
-        background-image: linear-gradient(264.91deg, #7C4EAB 0.73%, #DD51D4 95.85%);
-        border-radius: 5px;
-      }
-    }
-  }
+	&__title {
+		text-align: center;
+		line-height: 150%;
+		font-weight: 700;
+		font-size: 24px;
+		margin: 0 0 20px 0;
+		&--focus-on {
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				width: 131px;
+				height: 4px;
+				bottom: -8px;
+				left: 0;
+				background-image: linear-gradient(264.91deg, #7c4eab 0.73%, #dd51d4 95.85%);
+				border-radius: 5px;
+			}
+		}
+	}
 
-  &__main-thesis {
-    text-align: center;
-    margin: 0 0 50px 0;
-  }
+	&__main-thesis {
+		text-align: center;
+		margin: 0 0 50px 0;
+	}
 
-  &__list {
-  }
+	&__list {
+		@media (min-width: $tablet-md) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+		@media (min-width: $desktop-lg) {
+			display: flex;
+		}
+	}
 
-  &__item {
-  }
+	&__item {
+	}
 }
-
 
 .advantage {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  padding: 0 30px;
-  &__icon {
-    width: 60px;
-    height: 60px;
-  }
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+	padding: 0 30px;
+	&__icon {
+		width: 60px;
+		height: 60px;
+	}
 
-  &__title {
-    font-weight: 600;
-  }
+	&__title {
+		font-weight: 600;
+	}
 
-  &__text {
-    font-size: 16px;
-    line-height: 160%;
-  }
+	&__text {
+		font-size: 16px;
+		line-height: 160%;
+	}
 }
-
