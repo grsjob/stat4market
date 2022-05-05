@@ -23,8 +23,15 @@
 }
 .course-description {
 	margin: 0 0 85px 0;
+
+	@media (min-width: $desktop-lg) {
+		background-image: url("/src/img/blocks/course-description/Superman-lg.svg");
+		background-repeat: no-repeat;
+		background-position: right 15%;
+		padding-right: 400px;
+	}
 	@media (min-width: $desktop-xl) {
-		padding-right: 660px;
+		padding-right: 550px;
 		background-image: url("/src/img/blocks/course-description/Superman-xl.svg");
 		background-repeat: no-repeat;
 		background-size: 620px 605px;
@@ -62,7 +69,7 @@
 		@media (min-width: $tablet-md) {
 			font-size: 20px;
 			line-height: 160%;
-			padding-right: 260px;
+			padding-right: 220px;
 		}
 		@media (min-width: $desktop-xl) {
 			font-size: 25px;
