@@ -64,14 +64,14 @@
     @media (min-width: $desktop-lg) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      column-gap: 20px;
+      column-gap: 10px;
 
     }
   }
 
   &__item {
     display: grid;
-    grid-template-rows: min-content 60px max-content;
+    grid-template-rows: min-content max-content max-content;
     row-gap: 10px;
 
     & svg {
@@ -105,12 +105,21 @@
   &__title {
     font-weight: 700;
     margin: 0;
-
+	  min-height: 60px;
+	  @media (min-width: $tablet-md) {
+		  font-size: 20px;
+	  }
+	  @media (min-width: $desktop-xl) {
+		  font-size: 24px;
+	  }
   }
 
   &__text {
     font-size: 16px;
     line-height: 160%;
     margin: 0;
+	  @media (min-width: $desktop-xl) {
+		  font-size: 18px;
+	  }
   }
 }
