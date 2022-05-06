@@ -1,4 +1,5 @@
 .header {
+	/*Бэкграунды секции*/
 	padding-top: 35px;
 	background-image: url("/src/img/blocks/course-description/Superman-sm.svg");
 	background-repeat: no-repeat;
@@ -20,7 +21,7 @@
 		background-repeat: no-repeat;
 		background-position: left top, right bottom;
 	}
-
+/*Раздел шапки в headere*/
 	&__title {
 		display: flex;
 		flex-wrap: wrap;
@@ -31,13 +32,16 @@
 			min-height: 76px;
 		}
 	}
-
+/*Стили логотипа*/
 	&__logo {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 10px;
 		align-items: center;
 		text-decoration: none;
+		&:hover{
+			opacity: 0.5;
+		}
 		@media (min-width: $tablet-md) {
 			gap: 6px;
 			margin-right: 15px;
@@ -50,7 +54,7 @@
 			margin-right: 19px;
 		}
 	}
-
+	/*Стили слогана*/
 	&__tagline {
 		&.hidden {
 			display: none;
@@ -70,7 +74,7 @@
 			width: 221px;
 		}
 	}
-
+	/*Стили телефона*/
 	&__phone {
 		align-self: center;
 		font-size: 24px;
@@ -78,7 +82,9 @@
 		text-decoration: none;
 		color: #331a2f;
 		position: relative;
-
+		&:hover{
+			opacity: 0.5;
+		}
 		&:before {
 			content: "";
 			position: absolute;
@@ -103,7 +109,7 @@
 			display: none;
 		}
 	}
-
+	/*Стили кнопки входа*/
 	&__come-in-button {
 		align-self: center;
 		position: relative;
@@ -153,6 +159,7 @@
 }
 
 .header-logo {
+	/*Общие стили логотипа*/
 	&.hidden {
 		display: none;
 	}
@@ -190,7 +197,7 @@
 		}
 	}
 }
-
+/*Навигация*/
 .main-nav {
 	&__list {
 		display: none;
@@ -217,11 +224,16 @@
 
 	&__item {
 		align-self: center;
-		&.active {
+		& a {
+			text-decoration: none;
+			color: rgba(51, 26, 47, 0.8);
+			&:hover{
+				opacity: 0.5;
+			}
 		}
 	}
 }
-
+/*Бургер переключатель*/
 .nav__toggle {
 	@media (min-width: $desktop-lg) {
 		display: none;
@@ -264,7 +276,7 @@
 		right: 0;
 	}
 }
-
+/*Открытое меню бургер*/
 .nav__toggle.active {
 	&:after {
 		transform: rotate(-45deg);
@@ -282,7 +294,7 @@
 		display: none;
 	}
 }
-
+/*Хлебные крошки*/
 .bread-crumbs {
 	display: flex;
 	flex-wrap: wrap;
@@ -296,6 +308,9 @@
 
 		& a {
 			text-decoration: none;
+			&:hover{
+				opacity: 0.5;
+			}
 		}
 
 		&:not(:last-child):after {
