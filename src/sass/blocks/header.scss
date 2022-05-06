@@ -30,6 +30,7 @@
 
 	&__logo {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 10px;
 		align-items: center;
 		text-decoration: none;
@@ -77,11 +78,15 @@
 		&:before {
 			content: "";
 			position: absolute;
-			width: 16px;
-			height: 16px;
-			top: 0;
-			left: 0;
+			width: 19px;
+			height: 19px;
+			top: 9px;
+			left: -30px;
 			background-image: url("/src/img/icons/phone.svg");
+			@media (min-width: $desktop-xl){
+				//width: 19px;
+				//height: 19px;
+			}
 		}
 
 		@media (min-width: $desktop-xl) {

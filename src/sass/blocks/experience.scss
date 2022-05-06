@@ -54,8 +54,9 @@
 .carrent-experience {
 	&__text {
 		align-self: center;
+		margin-bottom: 10px;
 		@media (min-width: $tablet-md) {
-			max-width: 430px;
+			max-width: 420px;
 		}
 		@media (min-width: $desktop-lg) {
 			max-width: 565px;
@@ -69,7 +70,7 @@
 	&__text {
 		align-self: center;
 		@media (min-width: $tablet-md) {
-			max-width: 430px;
+			max-width: 420px;
 		}
 		@media (min-width: $desktop-lg) {
 			max-width: 565px;
