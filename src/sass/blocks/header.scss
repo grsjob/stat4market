@@ -1,298 +1,328 @@
 .header {
-  padding-top: 35px;
-  background-image: url("/src/img/blocks/course-description/Superman-sm.svg");
-  background-repeat: no-repeat;
-  background-position: right 16%;
+	/*Бэкграунды секции*/
+	padding-top: 35px;
+	background-image: url("/src/img/blocks/course-description/Superman-sm.svg");
+	background-repeat: no-repeat;
+	background-position: right 16%;
+	@media (min-width: $tablet-md) {
+		background-image: url("/src/img/blocks/course-description/Superman-md.svg");
+		background-repeat: no-repeat;
+		background-position: right 80%;
+	}
+	@media (min-width: $desktop-lg){
+		background-image: url("/src/img/blocks/course-description/Ellipse-lg.svg");
+		background-repeat: no-repeat;
+		background-position: left top;
+	}
 
-  @media(min-width: $desktop-xl) {
-    background-image: url("/src/img/blocks/course-description/Ellipse-left-xl.svg"),
-    url("/src/img/blocks/course-description/Ellipse-right-xl.svg");
-    background-repeat: no-repeat;
-    background-position: left top, right bottom;
+	@media (min-width: $desktop-xl) {
+		background-image: url("/src/img/blocks/course-description/Ellipse-left-xl.svg"),
+			url("/src/img/blocks/course-description/Ellipse-right-xl.svg");
+		background-repeat: no-repeat;
+		background-position: left top, right bottom;
+	}
+/*Раздел шапки в headere*/
+	&__title {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 0 40px 0;
+		min-height: 36px;
+		@media (min-width: $tablet-md){
+			min-height: 76px;
+		}
+	}
+/*Стили логотипа*/
+	&__logo {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		align-items: center;
+		text-decoration: none;
+		&:hover{
+			opacity: 0.5;
+		}
+		@media (min-width: $tablet-md) {
+			gap: 6px;
+			margin-right: 15px;
+		}
+		@media (min-width: $desktop-lg) {
+			gap: 14px;
+		}
+		@media (min-width: $desktop-xl) {
+			gap: 18px;
+			margin-right: 19px;
+		}
+	}
+	/*Стили слогана*/
+	&__tagline {
+		&.hidden {
+			display: none;
+		}
+		border-left: 1px solid rgba(51, 26, 47, 0.5);
+		align-self: center;
+		font-size: 10px;
+		line-height: 14px;
+		width: 168px;
+		padding: 10px 19px;
+		@media (max-width: $tablet-md) {
+			display: none;
+		}
+		@media (min-width: $desktop-xl) {
+			font-size: 14px;
+			line-height: 18px;
+			width: 221px;
+		}
+	}
+	/*Стили телефона*/
+	&__phone {
+		align-self: center;
+		font-size: 24px;
+		line-height: 35px;
+		text-decoration: none;
+		color: #331a2f;
+		position: relative;
+		&:hover{
+			opacity: 0.5;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			width: 19px;
+			height: 19px;
+			top: 9px;
+			left: -30px;
+			background-image: url("/src/img/icons/phone.svg");
+			@media (min-width: $desktop-xl){
+				//width: 19px;
+				//height: 19px;
+			}
+		}
 
-  }
+		@media (min-width: $desktop-xl) {
+			&:before {
+				width: 19px;
+				height: 19px;
+			}
+		}
+		@media (max-width: $desktop-lg) {
+			display: none;
+		}
+	}
+	/*Стили кнопки входа*/
+	&__come-in-button {
+		align-self: center;
+		position: relative;
+		padding: 4px 20px 4px 41px;
+		&.hidden {
+			display: none;
+		}
 
-  &__title {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 0 40px 0;
-  }
+		@media (min-width: $tablet-md) {
+			padding: 4px 32px 4px 66px;
+			font-size: 20px;
+			line-height: 35px;
+		}
+		@media (min-width: $desktop-lg) {
+			font-size: 18px;
+			line-height: 35px;
+		}
+		@media (min-width: $desktop-xl) {
+			padding: 4px 32px 5px 69px;
+			font-size: 23px;
+			line-height: 35px;
+		}
 
-  &__logo {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    text-decoration: none;
-    @media (min-width: $tablet-md) {
-      gap: 6px;
-      margin-right: 15px;
+		&:before {
+			position: absolute;
+			content: "";
+			width: 14px;
+			height: 14px;
+			top: 11px;
+			left: 18px;
+			background-image: url("/src/img/icons/arrow.svg");
+			@media (min-width: $tablet-md) {
+				width: 20px;
+				height: 20px;
+				top: 11px;
+				left: 32px;
+			}
 
-    }
-    @media (min-width: $desktop-lg) {
-      gap: 14px;
-
-    }
-    @media (min-width: $desktop-xl) {
-      gap: 18px;
-      margin-right: 19px;
-    }
-  }
-
-
-  &__tagline {
-    &.hidden{
-      display: none;
-    }
-    border-left: 1px solid rgba(51, 26, 47, 0.5);
-    align-self: center;
-    font-size: 10px;
-    line-height: 14px;
-    width: 168px;
-    padding: 10px 19px;
-    @media (max-width: $tablet-md) {
-      display: none;
-    }
-    @media (min-width: $desktop-xl) {
-      font-size: 14px;
-      line-height: 18px;
-      width: 221px;
-    }
-  }
-
-  &__phone {
-    align-self: center;
-    font-size: 24px;
-    line-height: 35px;
-    text-decoration: none;
-    color: #331A2F;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      top: 0;
-      left: 0;
-      background-image: url("/src/img/icons/phone.svg")
-    }
-
-    @media (min-width: $desktop-xl) {
-      &:before {
-        width: 19px;
-        height: 19px;
-      }
-    }
-    @media (max-width: $desktop-lg) {
-      display: none;
-    }
-
-  }
-
-  &__come-in-button {
-    align-self: center;
-    position: relative;
-    padding: 4px 20px 4px 41px;
-    &.hidden{
-      display: none;
-    }
-
-    @media (min-width: $tablet-md) {
-      padding: 4px 32px 4px 66px;
-      font-size: 20px;
-      line-height: 35px;
-    }
-    @media (min-width: $desktop-lg) {
-      font-size: 18px;
-      line-height: 35px;
-    }
-    @media (min-width: $desktop-xl) {
-      padding: 4px 32px 5px 69px;
-      font-size: 23px;
-      line-height: 35px;
-    }
-
-    &:before {
-      position: absolute;
-      content: "";
-      width: 14px;
-      height: 14px;
-      top: 11px;
-      left: 18px;
-      background-image: url("/src/img/icons/arrow.svg");
-      @media (min-width: $tablet-md) {
-        width: 20px;
-        height: 20px;
-        top: 11px;
-        left: 32px;
-      }
-
-      @media (min-width: $desktop-xl) {
-        width: 23px;
-        height: 23px;
-        top: 10px;
-        left: 32px;
-      }
-    }
-  }
+			@media (min-width: $desktop-xl) {
+				width: 23px;
+				height: 23px;
+				top: 10px;
+				left: 32px;
+			}
+		}
+	}
 }
 
 .header-logo {
-  &.hidden{
-    display: none;
-  }
-  &__icon {
-    width: 35px;
-    height: 32px;
-    @media (min-width: $tablet-md) {
-      width: 47px;
-      height: 40px;
-    }
-    @media (min-width: $desktop-lg) {
-      width: 47px;
-      height: 44px;
-    }
-    @media (min-width: $desktop-xl) {
-      width: 60px;
-      height: 58px;
-    }
-  }
+	/*Общие стили логотипа*/
+	&.hidden {
+		display: none;
+	}
+	&__icon {
+		width: 35px;
+		height: 32px;
+		@media (min-width: $tablet-md) {
+			width: 47px;
+			height: 40px;
+		}
+		@media (min-width: $desktop-lg) {
+			width: 47px;
+			height: 44px;
+		}
+		@media (min-width: $desktop-xl) {
+			width: 60px;
+			height: 58px;
+		}
+	}
 
-  &__title {
-    font-family: "Aretha", "Arial", sans-serif;
-    font-weight: 700;
-    font-size: 18.5124px;
-    line-height: 22px;
-    letter-spacing: -0.01em;
-    color: $darkgrey;
-    @media (min-width: $tablet-md) {
-      font-size: 24.7643px;
-      line-height: 30px;
-    }
-    @media (min-width: $desktop-xl) {
-      font-size: 31.8678px;
-      line-height: 39px;
-    }
-  }
+	&__title {
+		font-family: "Aretha", "Arial", sans-serif;
+		font-weight: 700;
+		font-size: 18.5124px;
+		line-height: 22px;
+		letter-spacing: -0.01em;
+		color: $darkgrey;
+		@media (min-width: $tablet-md) {
+			font-size: 24.7643px;
+			line-height: 30px;
+		}
+		@media (min-width: $desktop-xl) {
+			font-size: 31.8678px;
+			line-height: 39px;
+		}
+	}
 }
-
+/*Навигация*/
 .main-nav {
+	&__list {
+		display: none;
+		@media (min-width: $desktop-lg) {
+			display: flex;
+			gap: 65px;
+			justify-content: center;
+			font-size: 18px;
+			line-height: 35px;
+			flex-wrap: wrap;
+		}
+		@media (min-width: $desktop-xl) {
+			gap: 75px;
+			font-size: 24px;
+			line-height: 35px;
+		}
 
-  &__list {
-    display: none;
-    @media (min-width: $desktop-lg) {
-      display: flex;
-      gap: 65px;
-      justify-content: center;
-      font-size: 18px;
-      line-height: 35px;
-      flex-wrap: wrap;
-    }
-    @media (min-width: $desktop-xl) {
-      gap: 75px;
-      font-size: 24px;
-      line-height: 35px;
-    }
+		&.active {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+	}
 
-    &.active {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-  }
-
-  &__item {
-    align-self: center;
-    &.active {
-    }
-  }
+	&__item {
+		align-self: center;
+		& a {
+			text-decoration: none;
+			color: rgba(51, 26, 47, 0.8);
+			&:hover{
+				opacity: 0.5;
+			}
+		}
+	}
 }
-
+/*Бургер переключатель*/
 .nav__toggle {
-  @media (min-width: $desktop-lg) {
-    display: none;
-  }
-  align-self: center;
-  border: none;
-  background-color: inherit;
-  position: relative;
-  width: 42px;
-  height: 28px;
-  cursor: pointer;
+	@media (min-width: $desktop-lg) {
+		display: none;
+	}
+	align-self: center;
+	border: none;
+	background-color: inherit;
+	position: relative;
+	width: 42px;
+	height: 28px;
+	cursor: pointer;
 
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background: $main-color;
-    border-radius: 4px;
-  }
+	&:after,
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		background: $main-color;
+		border-radius: 4px;
+	}
 
-  &:after {
-    top: 42%;
-    left: 0;
-  }
+	&:after {
+		top: 42%;
+		left: 0;
+	}
 
-  &:before {
-    top: 0;
-    left: 0;
-  }
+	&:before {
+		top: 0;
+		left: 0;
+	}
 
-  & span {
-    position: absolute;
-    background: $main-color;
-    border-radius: 4px;
-    width: 70%;
-    height: 4px;
-    bottom: 0;
-    right: 0;
-  }
+	& span {
+		position: absolute;
+		background: $main-color;
+		border-radius: 4px;
+		width: 70%;
+		height: 4px;
+		bottom: 0;
+		right: 0;
+	}
 }
-
+/*Открытое меню бургер*/
 .nav__toggle.active {
-  &:after {
-    transform: rotate(-45deg);
-    top: 45%;
-    left: 0;
-  }
+	&:after {
+		transform: rotate(-45deg);
+		top: 45%;
+		left: 0;
+	}
 
-  &:before {
-    transform: rotate(45deg);
-    top: 45%;
-    left: 0;
-  }
+	&:before {
+		transform: rotate(45deg);
+		top: 45%;
+		left: 0;
+	}
 
-  & span {
-    display: none;
-  }
+	& span {
+		display: none;
+	}
 }
-
+/*Хлебные крошки*/
 .bread-crumbs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin: 0 0 43px 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
+	margin: 0 0 43px 0;
+	font-size: 16px;
+	line-height: 19px;
 
-  &__item {
-    position: relative;
+	&__item {
+		position: relative;
 
-    & a {
-      text-decoration: none;
-    }
+		& a {
+			text-decoration: none;
+			&:hover{
+				opacity: 0.5;
+			}
+		}
 
-    &:not(:last-child):after {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 1px;
-      right: -17px;
-      top: 15px;
-      background-color: rgba(51, 26, 47, 0.5);
-    }
-  }
+		&:not(:last-child):after {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 1px;
+			right: -17px;
+			top: 50%;
+			background-color: rgba(51, 26, 47, 0.5);
+		}
+	}
 }
 
 @import "./course-description";

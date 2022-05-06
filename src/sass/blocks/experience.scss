@@ -1,56 +1,87 @@
 .experience {
-  margin: 0 0 100px 0;
-@media (min-width:$tablet-md){
-  font-size: 20px;
-  line-height: 160%;
+	/*Общие стили секции*/
+	margin: 0 0 100px 0;
+	& p {
+		margin: 0;
+	}
+	@media (min-width: $tablet-md) {
+		font-size: 20px;
+		line-height: 160%;
+	}
+	@media (min-width: $desktop-xl) {
+		font-size: 25px;
+		padding: 0 95px 0 115px;
+	}
+
+	/*Заголовки секции*/
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 150%;
+		text-align: center;
+		margin: 0 0 50px 0;
+		@media (min-width: $tablet-md) {
+			font-size: 40px;
+			line-height: 64px;
+		}
+	}
+/*Раздел прошлого опыта*/
+	&__past {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 30px;
+
+		@media (min-width: $tablet-md) {
+			flex-direction: row;
+			gap: 40px;
+		}
+		@media (min-width: $desktop-lg){
+			gap: 80px
+		}
+	}
+	/*Раздел текущего опыта*/
+	&__current {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		@media (min-width: $tablet-md) {
+			flex-direction: row-reverse;
+			gap: 40px;
+		}
+		@media (min-width: $desktop-lg){
+			gap: 80px
+		}
+	}
 }
-  @media(min-width: $desktop-xl) {
-    font-size: 25px;
-    padding: 0 95px 0 115px;
-  }
-  &__title {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 150%;
-    text-align: center;
-    margin: 0 0 50px 0;
-    @media (min-width: $tablet-md) {
-      font-size: 40px;
-      line-height: 64px;
-    }
-  }
-
-  &__past {
-    background-image: url("/src/img/blocks/experience/experience-past.svg");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 269px 265px;
-    padding-top: 265px;
-
-    @media(min-width: $desktop-xl) {
-      padding-left: 535px;
-      padding-top: 100px;
-      padding-right: 155px;
-      min-height: 469px;
-      background-size: 456px 469px;
-    }
-  }
-
-  &__current {
-    background-image: url("/src/img/blocks/experience/experience-current.svg");
-    background-repeat: no-repeat;
-    background-size: 270px 270px;
-    padding-top: 270px;
-
-
-
-    @media(min-width: $desktop-xl) {
-      padding-right: 554px;
-      padding-top: 120px;
-      min-height: 474px;
-      background-size: 474px 474px;
-      background-position: right top;
-    }
-  }
-
+.carrent-experience {
+	/*Стили текста секции текущего опыта*/
+	&__text {
+		align-self: center;
+		margin-bottom: 10px;
+		@media (min-width: $tablet-md) {
+			max-width: 420px;
+		}
+		@media (min-width: $desktop-lg) {
+			max-width: 565px;
+		}
+		@media (min-width: $desktop-xl) {
+			max-width: 750px;
+		}
+	}
+}
+.past-experience {
+	/*Стили текста секции прошлого опыта*/
+	&__text {
+		align-self: center;
+		@media (min-width: $tablet-md) {
+			max-width: 420px;
+		}
+		@media (min-width: $desktop-lg) {
+			max-width: 565px;
+		}
+		@media (min-width: $desktop-xl) {
+			max-width: 750px;
+		}
+	}
 }
